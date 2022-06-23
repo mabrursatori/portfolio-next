@@ -41,24 +41,32 @@ const Contact = () => {
                         />
                         </div>
                         <div>
-                            <h2 className='py-2'>Name here</h2>
-                            <p>Front-End Developer</p>
+                            <h2 className='py-2'>Mabrur</h2>
+                            <p>Junior Software Developer</p>
                             <p className='py-4'>I am available for freelance or full-time positions. Contact me and lets talk.</p>
                         </div>
                         <div>
                         <p className='uppercase pt-8'>Connect With Me</p>
                         <div className='flex items-center justify-between py-4'>
                         <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                    <FaLinkedinIn/>
+                        <a href='https://www.linkedin.com/in/mabrur-371b44195/' target="_blank" rel='noreferrer'>
+                        <FaLinkedinIn/>
+                        </a>
                                 </div>
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                    <FaGithub/>
+                                <a href="https://github.com/mabrursatori" target="_blank" rel='noreferrer'>
+                                <FaGithub/>
+                                </a>
                                 </div>
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                <a href = "mailto:mabrursatori@gmail.com" target="_blank" rel='noreferrer'>
                                     <AiOutlineMail/>
+                                </a>
                                 </div>
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                <a href="https://api.whatsapp.com/send?phone=6285624436317" target="_blank" rel='noreferrer'>
                                     <BsFillPersonLinesFill/>
+                                </a>
                                 </div>
                         </div>
                     </div>

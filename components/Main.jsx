@@ -25,18 +25,18 @@ export default function Main() {
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                 <a href="https://github.com/mabrursatori" target="_blank" rel='noreferrer'>
-                                    <FaGithub/>
+                  <FaGithub/>
                 </a>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                
+                <a href = "mailto:mabrursatori@gmail.com" target="_blank" rel='noreferrer'>
                     <AiOutlineMail/>
-                
+                </a>
                                    
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                 <a href="https://api.whatsapp.com/send?phone=6285624436317" target="_blank" rel='noreferrer'>
-                                    <BsFillPersonLinesFill/>
+                      <BsFillPersonLinesFill/>
                   </a>
                 </div>
                 </div>

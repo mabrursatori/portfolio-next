@@ -116,16 +116,25 @@ const Navbar = () => {
                             </p>
                             <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                                  <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                    <FaLinkedin/>
+                                 <a href='https://www.linkedin.com/in/mabrur-371b44195/' target="_blank" rel='noreferrer'>
+                                 <FaLinkedin/>
+                                    </a>
+                                    
                                 </div>
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                    <FaGithub/>
+                                <a href="https://github.com/mabrursatori" target="_blank" rel='noreferrer'>
+                                <FaGithub/>
+                                </a>
                                 </div>
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                <a href = "mailto:mabrursatori@gmail.com" target="_blank" rel='noreferrer'>
                                     <AiOutlineMail/>
+                                </a>
                                 </div>
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                <a href="https://api.whatsapp.com/send?phone=6285624436317" target="_blank" rel='noreferrer'>
                                     <BsFillPersonLinesFill/>
+                                </a>
                                 </div>
                             </div>
                         </div>
