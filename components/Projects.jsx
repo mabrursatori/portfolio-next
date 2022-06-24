@@ -6,6 +6,7 @@ import cryptoImg from '../public/assets/projects/crypto.jpg'
 import netflixImg from '../public/assets/projects/netflix.jpg'
 import twitchImg from '../public/assets/projects/twitch.jpg'
 import portfolioImg from '../public/assets/projects/portfolio.jpg';
+import portfolioAnimationImg from '../public/assets/projects/portfolioanimation.jpg';
 import ProjectItem from './ProjectItem';
 
 export default function Projects() {
@@ -21,6 +22,12 @@ export default function Projects() {
                 title='Portfolio Web'
                 backgroundImg={portfolioImg}
                 projectUrl='/portfolio'
+                tech='Next JS'
+            />
+             <ProjectItem
+                title='Portfolio Web'
+                backgroundImg={portfolioAnimationImg}
+                projectUrl='/portfolioanimation'
                 tech='React JS'
             />
             {/* <ProjectItem

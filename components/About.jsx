@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import AboutImg from '../public/assets/about.jpg';
+import AboutImg from '../public/assets/profile.jpeg';
 
 export default function About() {
   return (

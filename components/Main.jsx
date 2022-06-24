@@ -2,6 +2,7 @@ import React from 'react'
 import { AiOutlineMail } from 'react-icons/ai'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import Link from 'next/link';
 
 export default function Main() {
   return (
@@ -29,10 +30,9 @@ export default function Main() {
                 </a>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                <a href = "mailto:mabrursatori@gmail.com" target="_blank" rel='noreferrer'>
-                    <AiOutlineMail/>
-                </a>
-                                   
+                <Link href='/#contact'>
+                <AiOutlineMail/>
+                </Link>              
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                 <a href="https://api.whatsapp.com/send?phone=6285624436317" target="_blank" rel='noreferrer'>

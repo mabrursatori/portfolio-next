@@ -126,10 +126,10 @@ const Navbar = () => {
                                 <FaGithub/>
                                 </a>
                                 </div>
-                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                <a href = "mailto:mabrursatori@gmail.com" target="_blank" rel='noreferrer'>
-                                    <AiOutlineMail/>
-                                </a>
+                                <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                <Link href='/#contact' >
+                                <AiOutlineMail/>
+                                </Link>    
                                 </div>
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                                 <a href="https://api.whatsapp.com/send?phone=6285624436317" target="_blank" rel='noreferrer'>
