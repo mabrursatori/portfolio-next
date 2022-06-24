@@ -5,6 +5,7 @@ import propertyImg from '../public/assets/projects/property.jpg';
 import cryptoImg from '../public/assets/projects/crypto.jpg'
 import netflixImg from '../public/assets/projects/netflix.jpg'
 import twitchImg from '../public/assets/projects/twitch.jpg'
+import portfolioImg from '../public/assets/projects/portfolio.jpg';
 import ProjectItem from './ProjectItem';
 
 export default function Projects() {
@@ -17,12 +18,12 @@ export default function Projects() {
             <h2 className='py-4'>What I&#39;ve Built</h2>
                 <div className='grid md:grid-cols-2 gap-8'>
                 <ProjectItem
-                title='Property Finder'
-                backgroundImg={propertyImg}
-                projectUrl='/property'
+                title='Portfolio Web'
+                backgroundImg={portfolioImg}
+                projectUrl='/portfolio'
                 tech='React JS'
             />
-            <ProjectItem
+            {/* <ProjectItem
                 title='Crypto App'
                 backgroundImg={cryptoImg}
                 projectUrl='/crypto'
@@ -42,7 +43,7 @@ export default function Projects() {
                 projectUrl='/twitch'
                 tech='Next JS'
 
-          />
+          /> */}
                 </div>
         </div>
     </div>
