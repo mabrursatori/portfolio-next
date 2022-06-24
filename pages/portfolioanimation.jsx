@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import propertyImg from '../public/assets/projects/portfolioanimation.jpg'
+import propertyImg from '../public/assets/projects/portfolioanimationfix.jpg'
 import {RiRadioButtonFill} from 'react-icons/ri'
 
 const property = () => {

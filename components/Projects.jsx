@@ -5,8 +5,8 @@ import propertyImg from '../public/assets/projects/property.jpg';
 import cryptoImg from '../public/assets/projects/crypto.jpg'
 import netflixImg from '../public/assets/projects/netflix.jpg'
 import twitchImg from '../public/assets/projects/twitch.jpg'
-import portfolioImg from '../public/assets/projects/portfolio.jpg';
-import portfolioAnimationImg from '../public/assets/projects/portfolioanimation.jpg';
+import portfolioImg from '../public/assets/projects/portfoliofix.jpg';
+import portfolioAnimationImg from '../public/assets/projects/portfolioanimationfix.jpg';
 import ProjectItem from './ProjectItem';
 
 export default function Projects() {
