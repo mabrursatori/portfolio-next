@@ -7,6 +7,7 @@ import netflixImg from '../public/assets/projects/netflix.jpg'
 import twitchImg from '../public/assets/projects/twitch.jpg'
 import portfolioImg from '../public/assets/projects/portfoliofix.jpg';
 import portfolioAnimationImg from '../public/assets/projects/portfolioanimationfix.jpg';
+import adminDashboardImg from '../public/assets/projects/admin-dashboard.png';
 import ProjectItem from './ProjectItem';
 
 export default function Projects() {
@@ -27,7 +28,14 @@ export default function Projects() {
              <ProjectItem
                 title='Portfolio Web'
                 backgroundImg={portfolioAnimationImg}
-                projectUrl='/portfolioanimation'
+                projectUrl='/portfolio-animation'
+                tech='React JS'
+            />
+
+            <ProjectItem
+                title='Admin Dashboard'
+                backgroundImg={adminDashboardImg}
+                projectUrl='/admin-dashboard'
                 tech='React JS'
             />
             {/* <ProjectItem
