@@ -55,6 +55,7 @@ const Detail = ({data}) => {
                     <div className='p-2'>
                         <p className='text-center font-bold pb-2'>Technologies</p>
                         <div className='grid grid-cols-3 md:grid-cols-1'>
+                            
                             {portfolio.tech.split(" ").map(item => (<p key={item} className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className='pr-1'/> {item}</p>))}
                             {/* <p className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className='pr-1'/> React</p>
                             <p className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className='pr-1'/> Tailwind</p>
