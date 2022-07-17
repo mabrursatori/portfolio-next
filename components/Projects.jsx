@@ -10,7 +10,8 @@ import portfolioAnimationImg from '../public/assets/projects/portfolioanimationf
 import adminDashboardImg from '../public/assets/projects/admin-dashboard.png';
 import ProjectItem from './ProjectItem';
 
-export default function Projects() {
+export default function Projects({data}) {
+    const portfolios = data.payload;
   return (
     <div id='projects' className='w-full'>
         <div className='max-w-[1240px] mx-auto px-2 py-16'>
@@ -19,13 +20,16 @@ export default function Projects() {
             </p>
             <h2 className='py-4'>What I&#39;ve Built</h2>
                 <div className='grid md:grid-cols-2 gap-8'>
-                <ProjectItem
-                title='Portfolio Web'
-                backgroundImg={portfolioImg}
-                projectUrl='/portfolio'
-                tech='Next JS'
-            />
-             <ProjectItem
+                    {portfolios.map(item => (<ProjectItem
+                key={item.id}
+                title={item.title}
+                backgroundImg={`${process.env.API_BASE_URL}/api/portfolio/image/${item.id}`}
+                
+                projectUrl={`/${item.id}`}
+                tech={item.label}
+            />))}
+                
+             {/* <ProjectItem
                 title='Portfolio Web'
                 backgroundImg={portfolioAnimationImg}
                 projectUrl='/portfolio-animation'
@@ -37,7 +41,7 @@ export default function Projects() {
                 backgroundImg={adminDashboardImg}
                 projectUrl='/admin-dashboard'
                 tech='React JS'
-            />
+            /> */}
             {/* <ProjectItem
                 title='Crypto App'
                 backgroundImg={cryptoImg}
@@ -64,3 +68,5 @@ export default function Projects() {
     </div>
   )
 }
+
+
