@@ -42,7 +42,7 @@ export async function getServerSideProps(context) {
     data = await getApi();
     console.log(data);
   }catch(e){
-    err = e;
+    err = e.message;
     console.log(e);
   }
 
