@@ -15,7 +15,7 @@ export default function Main() {
                    A Junior Software Developer
                 </h1>
                 <p className='py-4 text-gray-600 max-w-[70%] m-auto'>
-                  I&#39;m Junior Software Developer, I&#39;m exciting, commitment and professional for my job and my projects. Let&#39;s scroll down and know more about me.
+                  I&#39;m Full-Stack Developer, I&#39;m exciting, commitment and professional for my job and my projects. Let&#39;s scroll down and know more about me.
                 </p>
                 <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
                 <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
