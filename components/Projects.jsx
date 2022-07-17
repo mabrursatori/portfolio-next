@@ -11,7 +11,7 @@ import adminDashboardImg from '../public/assets/projects/admin-dashboard.png';
 import ProjectItem from './ProjectItem';
 
 export default function Projects({data}) {
-    const portfolios = data.payload;
+    const portfolios = data && data.payload;
   return (
     <div id='projects' className='w-full'>
         <div className='max-w-[1240px] mx-auto px-2 py-16'>
@@ -20,14 +20,14 @@ export default function Projects({data}) {
             </p>
             <h2 className='py-4'>What I&#39;ve Built</h2>
                 <div className='grid md:grid-cols-2 gap-8'>
-                    {portfolios.map(item => (<ProjectItem
+                    {portfolios ? portfolios.map(item => (<ProjectItem
                 key={item.id}
                 title={item.title}
                 backgroundImg={`${process.env.API_BASE_URL}/api/portfolio/image/${item.id}`}
                 
                 projectUrl={`/${item.id}`}
                 tech={item.label}
-            />))}
+            />)) : ''}
                 
              {/* <ProjectItem
                 title='Portfolio Web'

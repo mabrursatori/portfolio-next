@@ -50,8 +50,11 @@ const Navbar = () => {
         style={{ backgroundColor: `${navBg}` }}
         className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]' : 'fixed w-full h-20 z-[100]'}>
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-                <Link href='/'>
-                <Image src={navLogo} alt="/" width="125" height="50" />
+                <Link href='/' >
+                    <a>
+                    <Image src={navLogo} alt="/" width="125" height="50" />
+                    </a>
+                
                 </Link>
                 <div>
                     <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
@@ -128,7 +131,10 @@ const Navbar = () => {
                                 </div>
                                 <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                                 <Link href='/#contact' >
-                                <AiOutlineMail/>
+                                    <a>
+                                    <AiOutlineMail/>
+                                    </a>
+                                
                                 </Link>    
                                 </div>
                                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
