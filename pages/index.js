@@ -7,8 +7,9 @@ import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 
-export default function Home({data}) {
+export default function Home({data, error}) {
   console.log(data);
+  console.log(error);
   return (
     <div >
       <Head>
@@ -36,17 +37,19 @@ export async function getServerSideProps(context) {
       });
   }
   let data = null;
-  
+  let err = null;
   try{
     data = await getApi();
     console.log(data);
   }catch(e){
+    err = e;
     console.log(e);
   }
 
   return {
     props: {
-        data: data
+        data: data,
+        error: err;
     }, // will be passed to the page component as props
   }
 }
