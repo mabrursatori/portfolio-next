@@ -8,8 +8,7 @@ import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 
 export default function Home({data, error}) {
-  console.log(data);
-  console.log(error);
+  
   return (
     <div >
       <Head>

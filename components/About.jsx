@@ -11,7 +11,7 @@ export default function About() {
                 <h2 className='py-4'>Who I Am</h2>
                 <p className='py-2 text-gray-600'>I am full-stack developer</p>
                 <p className='py-2 text-gray-600'>
-                I have been working as Junior Software Developer for 2 years. Actually, I learn many stack technology like WPF.Net for desktop development, laravel, spring java, node.js for backend-development, angular for front-end development and flutter for mobile development. So I available for new opportunity to be FullStack Developer.
+                I have been working as Full-Stack Developer for 2 years. Actually, I learn many stack technology like WPF.Net for desktop development, laravel, spring java, node.js for backend-development, angular for front-end development and flutter for mobile development. So I available for new opportunity to be FullStack Developer.
                 </p>
                 <p className='py-2 text-gray-600 underline cursor-pointer'>Check out some of my latest projects</p>
             </div>
