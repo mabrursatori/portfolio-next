@@ -29,7 +29,7 @@ const admin = ({data}) => {
                 <td className='border border-slate-300 px-3 py-1'>{item.id}</td>
                 <td className='border border-slate-300 px-3 py-1'>{item.number}</td>
                 <td className='border border-slate-300 px-3 py-1'>{item.title}</td>
-                <td className='border border-slate-300 px-3 py-1'>{item.title}</td>
+                <td className='border border-slate-300 px-3 py-1'>{item.label}</td>
                 <td className='border border-slate-300 px-3 py-1'>{item.tech}</td>
                 <td className='border border-slate-300 px-3 py-1'>
                 <div className='w-[200px] h-[50px] overflow-auto break-all '>

@@ -9,32 +9,58 @@ import ContactImg from '../public/assets/contact.jpg'
 import emailjs from '@emailjs/browser';
 import { MdClose } from "react-icons/md";
 import { AiFillSmile } from "react-icons/ai";
+import { FaSadCry } from "react-icons/fa";
 
 const Contact = () => {
-    const [showToast, setShowToast] = useState(false);
+    const [showSuccessToast, setShowSuccessToast] = useState(false);
+    const [showFailedToast, setShowFailedToast] = useState(false);
     const form = useRef();
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
 
-    const sendEmail = (e) => {
+    const resetForm = () => {
+        setName('');
+        setPhone('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+    }
+
+    const sendEmail = e => {
         e.preventDefault();
+
+        if(!name && !phone && !email && !subject && !message){
+            setShowFailedToast(true);
+            setTimeout(() => {
+                setShowFailedToast(false);
+            }, 3000);
+            return;
+        }
+
         emailjs.sendForm(
-            'service_2v7rryh',
-            'template_ktk11ri',
+            process.env.EMAILJS_SERVICE_ID,
+            process.env.EMAILJS_TEMPLATE_ID,
             form.current,
-            "t0jcbMmalB_GQSrOu"
+            process.env.EMAILJS_PUBLIC_KEY
         )
                     .then(function() {
                         console.log('SUCCESS!');
-                        setShowToast(true);
+                        setShowSuccessToast(true);
+                        resetForm();
                         setTimeout(() => {
-                            setShowToast(false);
-                        }, 1000);
+                            setShowSuccessToast(false);
+                        }, 3000);
                     }, function(error) {
                         console.log('FAILED...', error);
                     });
     };
 
     const closeToast = () => {
-        setShowToast(false);
+        setShowSuccessToast(false);
+        setShowFailedToast(false);
     }
 
 
@@ -99,33 +125,38 @@ const Contact = () => {
                             <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                                 <div className='flex flex-col'>
                                     <label className='uppercase text-sm py-2'>Name</label>
-                                    <input className='border-2 rounded-lg p-3 flex border-gray-300'
+                                    <input value={name} onChange={(e) => {setName((prev) => e.target.value  )}} 
+                                    className='border-2 rounded-lg p-3 flex border-gray-300'
                                     type='text' name='name'
                                     />
                                 </div>
                                 <div className='flex flex-col'>
                                     <label className='uppercase text-sm py-2'>Phone Number</label>
-                                    <input className='border-2 rounded-lg p-3 flex border-gray-300'
+                                    <input value={phone} onChange={(e) => setPhone((prev) => e.target.value)} className='border-2 rounded-lg p-3 flex border-gray-300'
                                     type='text' name='phone'
                                     />
                                 </div>
                             </div>
                             <div className='flex flex-col py-2'>
                                 <label className='uppercase text-sm py-2'>Email</label>
-                                <input className='border-2 rounded-lg p-3 flex border-gray-300' 
+                                <input
+                                value={email} onChange={(e) => setEmail((prev) => e.target.value)} 
+                                className='border-2 rounded-lg p-3 flex border-gray-300' 
                                 type='email'
                                 name='email'
                                 />
                             </div>
                             <div className='flex flex-col py-2'>
                                 <label className='uppercase text-sm py-2'>Subject</label>
-                                <input className='border-2 rounded-lg p-3 flex border-gray-300' 
+                                <input
+                                value={subject} onChange={(e) => setSubject((prev) => e.target.value)} 
+                                className='border-2 rounded-lg p-3 flex border-gray-300' 
                                 name='subject'
                                 type='text'/>
                             </div>
                             <div className='flex flex-col py-2'>
                                 <label className='uppercase text-sm py-2'>Message</label>
-                                <textarea className='border-2 rounded-lg p-3' rows='10' name='message'></textarea>
+                                <textarea className='border-2 rounded-lg p-3' rows='10' name='message' defaultValue={message} onChange={(e) => setMessage((prev) => e.target.value)} ></textarea>
                             </div>
                             <button type='submit' className='w-full p-4 bg-[#5651e5] text-gray-100 mt-4'>Send Message</button>
                         </form>
@@ -133,11 +164,21 @@ const Contact = () => {
                 </div>
                
             </div>
+                {/* Success Toast */}
                 <div
-                className={`flex justify-evenly items-center fixed  h-[70px] w-[250px] bg-green-200  right-[50px] rounded-lg shadow-lg shadow-gray-500 ${showToast ? 'opacity-100 top-[100px]' : 'opacity-0 top-[50px]'} ease-in duration-100`}
+                className={`flex justify-evenly items-center fixed  h-[70px] w-[250px] bg-green-200  right-[50px] rounded-lg shadow-lg shadow-gray-500 ${showSuccessToast ? 'opacity-100 top-[100px]' : 'opacity-0 top-[50px]'} ease-in duration-100`}
                 >
                     <p>Your message sent <AiFillSmile className='inline text-yellow-500 text-[25px]'/>
                     <br/> Please wait for my reply </p>
+                    <MdClose onClick={closeToast} className='text-[30px] cursor-pointer'/>
+                </div>
+
+                {/* Failed Toast */}
+                <div
+                className={`flex justify-evenly items-center fixed  h-[70px] w-[250px] bg-red-200  right-[50px] rounded-lg shadow-lg shadow-gray-500 ${showFailedToast ? 'opacity-100 top-[100px]' : 'opacity-0 top-[50px]'} ease-in duration-100`}
+                >
+                    <p>Your message is&#39;nt sent <FaSadCry className='inline text-yellow-500 text-[25px]'/>
+                    <br/> Please fill the form </p>
                     <MdClose onClick={closeToast} className='text-[30px] cursor-pointer'/>
                 </div>
             <div className='flex justify-center py-12'>

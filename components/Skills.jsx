@@ -7,6 +7,7 @@ import ReactImg from '../public/assets/skills/react.png';
 import Tailwind from '../public/assets/skills/tailwind.png';
 import Github from '../public/assets/skills/github1.png';
 import Firebase from '../public/assets/skills/firebase.png';
+import Flutter from '../public/assets/skills/flutter.png';
 import NextJS from '../public/assets/skills/nextjs.png'
 import Spring from '../public/assets/skills/spring.png'
 import MySql from '../public/assets/skills/mysql.png'
@@ -130,6 +131,16 @@ export default function Skills() {
                   </div>
                   <div className='flex flex-col items-center justify-center'>
                     <h3>Next</h3>
+                  </div>
+                </div>
+              </div>
+              <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+                <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                  <div className='m-auto'>
+                    <Image src={Flutter} width='64px' height='64px' alt='/' />
+                  </div>
+                  <div className='flex flex-col items-center justify-center'>
+                    <h3>Flutter</h3>
                   </div>
                 </div>
               </div>
